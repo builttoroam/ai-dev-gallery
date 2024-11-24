@@ -123,8 +123,9 @@ namespace AIDevGallery.Controls
             {
                 VisualStateManager.GoToState(this, WideState, true);
             }
-
+#if WINDOWS
             SetDragRegionForCustomTitleBar();
+#endif
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
@@ -154,17 +155,23 @@ namespace AIDevGallery.Controls
 
         private void PART_ButtonHolder_SizeChanged(object sender, SizeChangedEventArgs e)
         {
+#if WINDOWS
             SetDragRegionForCustomTitleBar();
+#endif
         }
 
         private void Configure()
         {
+#if WINDOWS
             SetWASDKTitleBar();
+#endif
         }
 
         public void Reset()
         {
+#if WINDOWS
             ResetWASDKTitleBar();
+#endif
         }
 
         private void Update()
@@ -208,7 +215,9 @@ namespace AIDevGallery.Controls
                 VisualStateManager.GoToState(this, FooterCollapsedState, true);
             }
 
+#if WINDOWS
             SetDragRegionForCustomTitleBar();
+#endif
         }
     }
 #pragma warning restore CS1591 // Missing XML comment for publicly visible type or member

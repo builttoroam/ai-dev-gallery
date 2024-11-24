@@ -46,7 +46,9 @@ internal class StableDiffusion : IDisposable
         string currentDirectory = AppDomain.CurrentDomain.BaseDirectory + "Samples\\Open Source Models\\Stable Diffusion";
         string tokenizerPath = Path.Combine(currentDirectory, config.TokenizerModelPath);
 
+#if WINDOWS
         config.DeviceId = DeviceUtils.GetBestDeviceId();
+#endif
 
         SessionOptions = config.GetSessionOptionsForEp(hardwareAccelerator);
 

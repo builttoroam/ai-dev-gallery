@@ -3,8 +3,10 @@
 
 using AIDevGallery.Models;
 using AIDevGallery.Telemetry.Events;
+#if WINDOWS
 using Microsoft.Windows.AppNotifications;
 using Microsoft.Windows.AppNotifications.Builder;
+#endif
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -257,6 +259,7 @@ namespace AIDevGallery.Utils
 
         private static void SendNotification(ModelDetails model)
         {
+#if WINDOWS
             var builder = new AppNotificationBuilder()
                             .AddText(model.Name + " is ready to use.")
                             .AddButton(new AppNotificationButton("Try it out")
@@ -264,6 +267,7 @@ namespace AIDevGallery.Utils
 
             var notificationManager = AppNotificationManager.Default;
             notificationManager.Show(builder.BuildNotification());
+#endif
         }
     }
 

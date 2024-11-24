@@ -1,5 +1,6 @@
 <Project>
   <ItemGroup>
     <PackageReference Include="StyleCop.Analyzers" PrivateAssets="All" />
+
   </ItemGroup>
 </Project>

@@ -27,6 +27,7 @@ internal class ModelCompatibility
         {
             compatibility = ModelCompatibilityState.Compatible;
         }
+#if WINDOWS
         else if (!DeviceUtils.IsArm64())
         {
             var vram = DeviceUtils.GetVram();
@@ -59,6 +60,7 @@ internal class ModelCompatibility
                 }
             }
         }
+#endif
         else
         {
             compatibility = ModelCompatibilityState.NotCompatible;

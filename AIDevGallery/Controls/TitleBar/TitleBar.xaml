@@ -7,9 +7,13 @@
     <x:Double x:Key="TitleBarCompactHeight">32</x:Double>
     <x:Double x:Key="TitleBarTallHeight">48</x:Double>
     <x:Double x:Key="TitleBarContentMaxWidth">360</x:Double>
-    <Style BasedOn="{StaticResource DefaultTitleBarStyle}" TargetType="local:TitleBar" />
+    <Style
+        BasedOn="{StaticResource DefaultTitleBarStyle}"
+        TargetType="local:TitleBar" />
 
-    <Style x:Key="DefaultTitleBarStyle" TargetType="local:TitleBar">
+    <Style
+        x:Key="DefaultTitleBarStyle"
+        TargetType="local:TitleBar">
         <Setter Property="MinHeight" Value="{ThemeResource TitleBarCompactHeight}" />
         <Setter Property="Template">
             <Setter.Value>
@@ -21,21 +25,35 @@
                         VerticalAlignment="Stretch"
                         Background="{TemplateBinding Background}">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition x:Name="PART_LeftPaddingColumn" Width="0" />
-                            <ColumnDefinition x:Name="PART_ButtonsHolderColumn" Width="Auto" />
-                            <ColumnDefinition x:Name="PART_IconColumn" Width="Auto" />
-                            <ColumnDefinition x:Name="PART_TitleColumn" Width="Auto" />
+                            <ColumnDefinition
+                                x:Name="PART_LeftPaddingColumn"
+                                Width="0" />
+                            <ColumnDefinition
+                                x:Name="PART_ButtonsHolderColumn"
+                                Width="Auto" />
+                            <ColumnDefinition
+                                x:Name="PART_IconColumn"
+                                Width="Auto" />
+                            <ColumnDefinition
+                                x:Name="PART_TitleColumn"
+                                Width="Auto" />
                             <ColumnDefinition
                                 x:Name="PART_LeftDragColumn"
                                 Width="*"
                                 MinWidth="4" />
-                            <ColumnDefinition x:Name="PART_ContentColumn" Width="Auto" />
+                            <ColumnDefinition
+                                x:Name="PART_ContentColumn"
+                                Width="Auto" />
                             <ColumnDefinition
                                 x:Name="PART_RightDragColumn"
                                 Width="*"
                                 MinWidth="4" />
-                            <ColumnDefinition x:Name="PART_FooterColumn" Width="Auto" />
-                            <ColumnDefinition x:Name="PART_RightPaddingColumn" Width="0" />
+                            <ColumnDefinition
+                                x:Name="PART_FooterColumn"
+                                Width="Auto" />
+                            <ColumnDefinition
+                                x:Name="PART_RightPaddingColumn"
+                                Width="0" />
                         </Grid.ColumnDefinitions>
                         <Border
                             x:Name="PART_IconHolder"
@@ -97,7 +115,9 @@
                                 Style="{StaticResource SubtleButtonStyle}"
                                 ToolTipService.ToolTip="Back">
                                 <Button.Content>
-                                    <FontIcon FontSize="14" Glyph="&#xE72B;" />
+                                    <FontIcon
+                                        FontSize="14"
+                                        Glyph="&#xE72B;" />
                                 </Button.Content>
                             </Button>
                             <Button
@@ -207,7 +227,9 @@
     </Style>
 
     <!--  Copy of WinUI PaneToggleButtonStyle - cannot use it as it picks up the generic.xaml version, not the WinUI version  -->
-    <Style x:Key="TitleBarPaneToggleButtonStyle" TargetType="Button">
+    <Style
+        x:Key="TitleBarPaneToggleButtonStyle"
+        TargetType="Button">
         <Setter Property="Background" Value="{ThemeResource NavigationViewBackButtonBackground}" />
         <Setter Property="Foreground" Value="{ThemeResource NavigationViewItemForegroundChecked}" />
         <Setter Property="FontFamily" Value="{ThemeResource SymbolThemeFontFamily}" />
@@ -250,11 +272,19 @@
                                 <VisualState x:Name="Normal" />
                                 <VisualState x:Name="PointerOver">
                                     <Storyboard>
-                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RootGrid" Storyboard.TargetProperty="Background">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource NavigationViewButtonBackgroundPointerOver}" />
+                                        <ObjectAnimationUsingKeyFrames
+                                            Storyboard.TargetName="RootGrid"
+                                            Storyboard.TargetProperty="Background">
+                                            <DiscreteObjectKeyFrame
+                                                KeyTime="0"
+                                                Value="{ThemeResource NavigationViewButtonBackgroundPointerOver}" />
                                         </ObjectAnimationUsingKeyFrames>
-                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Content" Storyboard.TargetProperty="Foreground">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource NavigationViewButtonForegroundPointerOver}" />
+                                        <ObjectAnimationUsingKeyFrames
+                                            Storyboard.TargetName="Content"
+                                            Storyboard.TargetProperty="Foreground">
+                                            <DiscreteObjectKeyFrame
+                                                KeyTime="0"
+                                                Value="{ThemeResource NavigationViewButtonForegroundPointerOver}" />
                                         </ObjectAnimationUsingKeyFrames>
                                     </Storyboard>
                                     <VisualState.Setters>
@@ -264,11 +294,19 @@
 
                                 <VisualState x:Name="Pressed">
                                     <Storyboard>
-                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RootGrid" Storyboard.TargetProperty="Background">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource NavigationViewButtonBackgroundPressed}" />
+                                        <ObjectAnimationUsingKeyFrames
+                                            Storyboard.TargetName="RootGrid"
+                                            Storyboard.TargetProperty="Background">
+                                            <DiscreteObjectKeyFrame
+                                                KeyTime="0"
+                                                Value="{ThemeResource NavigationViewButtonBackgroundPressed}" />
                                         </ObjectAnimationUsingKeyFrames>
-                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Content" Storyboard.TargetProperty="Foreground">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource NavigationViewButtonForegroundPressed}" />
+                                        <ObjectAnimationUsingKeyFrames
+                                            Storyboard.TargetName="Content"
+                                            Storyboard.TargetProperty="Foreground">
+                                            <DiscreteObjectKeyFrame
+                                                KeyTime="0"
+                                                Value="{ThemeResource NavigationViewButtonForegroundPressed}" />
                                         </ObjectAnimationUsingKeyFrames>
                                     </Storyboard>
                                     <VisualState.Setters>
@@ -278,8 +316,12 @@
 
                                 <VisualState x:Name="Disabled">
                                     <Storyboard>
-                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Content" Storyboard.TargetProperty="Foreground">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource NavigationViewButtonForegroundDisabled}" />
+                                        <ObjectAnimationUsingKeyFrames
+                                            Storyboard.TargetName="Content"
+                                            Storyboard.TargetProperty="Foreground">
+                                            <DiscreteObjectKeyFrame
+                                                KeyTime="0"
+                                                Value="{ThemeResource NavigationViewButtonForegroundDisabled}" />
                                         </ObjectAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>

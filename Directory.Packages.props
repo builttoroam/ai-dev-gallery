@@ -6,17 +6,20 @@
     <PackageVersion Include="Microsoft.Extensions.AI.Abstractions" Version="9.0.1-preview.1.24570.5" />
     <PackageVersion Include="Microsoft.SemanticKernel.Connectors.InMemory" Version="1.29.0-preview" />
     <PackageVersion Include="Microsoft.Xaml.Behaviors.WinUI.Managed" Version="2.0.9" />
+    <PackageVersion Include="Uno.Microsoft.Xaml.Behaviors.WinUI.Managed" Version="2.4.2" />
     <PackageVersion Include="System.Text.Json" Version="9.0.0" />
     <PackageVersion Include="System.Threading.Tasks.Dataflow" Version="9.0.0" />
     <PackageVersion Include="System.Memory" Version="4.6.0" />
     <PackageVersion Include="PolySharp" Version="1.14.1" />
     <PackageVersion Include="Microsoft.ML.Tokenizers" Version="1.0.0" />
     <PackageVersion Include="ColorCode.WinUI" Version="2.0.15" />
+    <PackageVersion Include="Uno.ColorCode.WinUI" Version="2.1.0-uno.36" />
     <PackageVersion Include="CommunityToolkit.Mvvm" Version="8.3.2" />
     <PackageVersion Include="CommunityToolkit.WinUI.Controls.Primitives" Version="8.1.240916" />
     <PackageVersion Include="CommunityToolkit.WinUI.Controls.SettingsControls" Version="8.1.240916" />
     <PackageVersion Include="CommunityToolkit.WinUI.Converters" Version="8.1.240916" />
     <PackageVersion Include="CommunityToolkit.WinUI.UI.Controls.Markdown" Version="7.1.2" />
+    <PackageVersion Include="Uno.CommunityToolkit.WinUI.UI.Controls.Markdown" Version="7.1.204" />
     <PackageVersion Include="Microsoft.Build" Version="17.11.4" />
     <PackageVersion Include="Microsoft.ML.OnnxRuntime.DirectML" Version="1.20.0" />
     <PackageVersion Include="Microsoft.ML.OnnxRuntime.Extensions" Version="0.13.0" />

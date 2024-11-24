@@ -61,7 +61,7 @@ namespace AIDevGallery.ProjectGenerator
             return GenerateAsyncInternal(sample, models, copyModelLocally, packageReferences, outputPath, cancellationToken);
         }
 
-        internal const string DotNetVersion = "net9.0";
+        internal const string DotNetVersion = "net8.0";
 
         private async Task<string> GenerateAsyncInternal(Sample sample, Dictionary<ModelType, (string CachedModelDirectoryPath, string ModelUrl)> models, bool copyModelLocally, List<(string PackageName, string? Version)> packageReferences, string outputPath, CancellationToken cancellationToken)
         {

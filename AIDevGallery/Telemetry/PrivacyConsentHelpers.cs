@@ -50,9 +50,16 @@ namespace AIDevGallery.Telemetry
 
         public static bool IsPrivacySensitiveRegion()
         {
-            var geographicRegion = new GeographicRegion();
+            try
+            {
+                var geographicRegion = new GeographicRegion();
 
-            return PrivacySensitiveRegions.Contains(geographicRegion.CodeThreeLetter, StringComparer.OrdinalIgnoreCase);
+                return PrivacySensitiveRegions.Contains(geographicRegion.CodeThreeLetter, StringComparer.OrdinalIgnoreCase);
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 }

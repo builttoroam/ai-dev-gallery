@@ -42,7 +42,9 @@ internal partial class EmbeddingGenerator : IDisposable, IEmbeddingGenerator<str
 
         if (hardwareAccelerator == HardwareAccelerator.DML)
         {
+#if WINDOWS
             _sessionOptions.AppendExecutionProvider_DML(DeviceUtils.GetBestDeviceId());
+#endif
         }
 
         _inferenceSession = new InferenceSession(Path.Join(modelPath, "onnx", "model.onnx"), _sessionOptions);

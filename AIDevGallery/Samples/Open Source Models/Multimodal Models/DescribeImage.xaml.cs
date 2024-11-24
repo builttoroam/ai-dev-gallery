@@ -74,7 +74,7 @@ internal sealed partial class DescribeImage : BaseSamplePage
                 }
                 catch (Exception ex)
                 {
-                    Debug.WriteLine(ex.Message);
+                    System.Diagnostics.Debug.WriteLine(ex.Message);
                     Dispose();
                 }
             },

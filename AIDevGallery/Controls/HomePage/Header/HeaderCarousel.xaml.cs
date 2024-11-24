@@ -150,8 +150,9 @@ internal sealed partial class HeaderCarousel : UserControl
         if (selectedTile != null)
         {
             selectedTile.IsSelected = true;
-            BackDropImage.ImageUrl = new Uri(selectedTile.ImageUrl);
-
+#if WINDOWS
+            //BackDropImage.ImageUrl = new Uri(selectedTile.ImageUrl);
+#endif
             if (selectedTile.Foreground is LinearGradientBrush brush)
             {
                 AnimateTitleGradient(brush);

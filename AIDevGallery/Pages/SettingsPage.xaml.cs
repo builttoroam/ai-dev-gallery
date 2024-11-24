@@ -99,7 +99,7 @@ namespace AIDevGallery.Pages
                     Title = "Delete model",
                     Content = "Are you sure you want to delete this model?",
                     PrimaryButtonText = "Yes",
-                    XamlRoot = this.Content.XamlRoot,
+                    XamlRoot = (this.Content as FrameworkElement)!.XamlRoot,
                     PrimaryButtonStyle = (Style)App.Current.Resources["AccentButtonStyle"],
                     CloseButtonText = "No"
                 };
@@ -121,7 +121,7 @@ namespace AIDevGallery.Pages
                 Title = "Clear cache",
                 Content = "Are you sure you want to clear the entire cache? All downloaded models will be deleted.",
                 PrimaryButtonText = "Yes",
-                XamlRoot = this.Content.XamlRoot,
+                XamlRoot = (this.Content as FrameworkElement)!.XamlRoot,
                 PrimaryButtonStyle = (Style)App.Current.Resources["AccentButtonStyle"],
                 CloseButtonText = "No"
             };
@@ -170,7 +170,7 @@ namespace AIDevGallery.Pages
                 {
                     Title = "Downloads in progress",
                     Content = $"There are currently {downloadCount} downloads in progress. Please cancel them or wait for them to complete before changing the cache path.",
-                    XamlRoot = this.Content.XamlRoot,
+                    XamlRoot = (this.Content as FrameworkElement)!.XamlRoot,
                     CloseButtonText = "OK"
                 };
                 await dialog.ShowAsync();
@@ -189,7 +189,7 @@ namespace AIDevGallery.Pages
                     {
                         Title = "Folder not empty",
                         Content = @"The destination folder contains files. Please select an empty folder for the destination.",
-                        XamlRoot = this.Content.XamlRoot,
+                        XamlRoot = (this.Content as FrameworkElement)!.XamlRoot,
                         CloseButtonText = "OK"
                     };
 
@@ -223,7 +223,7 @@ namespace AIDevGallery.Pages
     Available space {availableSpace:N1} GB
 
 Please free up some space before moving the cache.",
-                        XamlRoot = this.Content.XamlRoot,
+                        XamlRoot = (this.Content as FrameworkElement)!.XamlRoot,
                         CloseButtonText = "OK"
                     };
                     await dialog.ShowAsync();
@@ -244,7 +244,7 @@ You can speed things up by clearing the cache or deleting models from it first.
 Do you want to proceed with the move?",
                         PrimaryButtonText = "Confirm",
                         PrimaryButtonStyle = (Style)App.Current.Resources["AccentButtonStyle"],
-                        XamlRoot = this.Content.XamlRoot,
+                        XamlRoot = (this.Content as FrameworkElement)!.XamlRoot,
                         CloseButtonText = "Cancel"
                     };
 
@@ -274,7 +274,7 @@ Do you want to proceed with the move?",
                             Title = "Error moving files",
                             Content = $@"The cache folder could not be moved:
 {ex.Message}",
-                            XamlRoot = this.Content.XamlRoot,
+                            XamlRoot = (this.Content as FrameworkElement)!.XamlRoot,
                             CloseButtonText = "OK"
                         };
                         await errorDialog.ShowAsync();

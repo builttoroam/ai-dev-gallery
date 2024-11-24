@@ -1,5 +1,6 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
+#if WINDOWS
 
 using Microsoft.UI.Xaml;
 using System;
@@ -38,7 +39,7 @@ internal class WndProcHelper
     public void RegisterWndProc(WNDPROC wndProc)
     {
         newMainWindowWndProc = wndProc;
-        oldMainWindowWndProc = Marshal.GetDelegateForFunctionPointer<WNDPROC>(SetWindowLongPtr(Handle, WINDOW_LONG_PTR_INDEX.GWL_WNDPROC, Marshal.GetFunctionPointerForDelegate(newMainWindowWndProc)));
+        //oldMainWindowWndProc = Marshal.GetDelegateForFunctionPointer<WNDPROC>(SetWindowLongPtr(Handle, WINDOW_LONG_PTR_INDEX.GWL_WNDPROC, Marshal.GetFunctionPointerForDelegate(newMainWindowWndProc)));
     }
 
     public void RegisterInputNonClientPointerSourceWndProc(WNDPROC wndProc)
@@ -51,7 +52,8 @@ internal class WndProcHelper
             var hr = SetWindowLong(Handle, WINDOW_LONG_PTR_INDEX.GWL_STYLE, style & ~(int)WINDOW_STYLE.WS_SYSMENU);
 
             newInputNonClientPointerSourceWndProc = wndProc;
-            oldInputNonClientPointerSourceWndProc = Marshal.GetDelegateForFunctionPointer<WNDPROC>(SetWindowLongPtr(inputNonClientPointerSourceHandle, WINDOW_LONG_PTR_INDEX.GWL_WNDPROC, Marshal.GetFunctionPointerForDelegate(newInputNonClientPointerSourceWndProc)));
+            //oldInputNonClientPointerSourceWndProc = Marshal.GetDelegateForFunctionPointer<WNDPROC>(SetWindowLongPtr(inputNonClientPointerSourceHandle, WINDOW_LONG_PTR_INDEX.GWL_WNDPROC, Marshal.GetFunctionPointerForDelegate(newInputNonClientPointerSourceWndProc)));
         }
     }
 }
+#endif

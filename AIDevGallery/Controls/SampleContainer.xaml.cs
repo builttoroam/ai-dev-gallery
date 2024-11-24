@@ -287,10 +287,12 @@ namespace AIDevGallery.Controls
             {
                 // Adjust DefaultDark Theme to meet contrast accessibility requirements
                 StyleDictionary darkStyles = StyleDictionary.DefaultDark;
+#if WINDOWS
                 darkStyles[ScopeName.Comment].Foreground = StyleDictionary.BrightGreen;
                 darkStyles[ScopeName.XmlDocComment].Foreground = StyleDictionary.BrightGreen;
                 darkStyles[ScopeName.XmlDocTag].Foreground = StyleDictionary.BrightGreen;
                 darkStyles[ScopeName.XmlComment].Foreground = StyleDictionary.BrightGreen;
+#endif
                 darkStyles[ScopeName.XmlDelimiter].Foreground = StyleDictionary.White;
                 darkStyles[ScopeName.Keyword].Foreground = "#FF41D6FF";
                 darkStyles[ScopeName.String].Foreground = "#FFFFB100";

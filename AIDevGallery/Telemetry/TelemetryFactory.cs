@@ -11,7 +11,7 @@ namespace AIDevGallery.Telemetry
     /// </summary>
     internal class TelemetryFactory
     {
-        private static readonly Lock LockObj = new();
+        private static readonly object LockObj = new();
 
         private static Telemetry? telemetryInstance;
 

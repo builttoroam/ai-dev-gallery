@@ -162,7 +162,9 @@ internal sealed partial class GenerateCode : BaseSamplePage
         { "C#", Languages.CSharp },
         { "C++", Languages.Cpp },
         { "Java", Languages.Java },
+#if WINDOWS
         { "Python", Languages.Python },
+#endif
         { "JavaScript", Languages.JavaScript },
         { "TypeScript", Languages.Typescript },
     };

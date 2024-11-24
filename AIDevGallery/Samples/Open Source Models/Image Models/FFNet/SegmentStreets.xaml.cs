@@ -75,7 +75,9 @@ internal sealed partial class SegmentStreets : BaseSamplePage
             sessionOptions.RegisterOrtExtensions();
             if (hardwareAccelerator == HardwareAccelerator.DML)
             {
+#if WINDOWS
                 sessionOptions.AppendExecutionProvider_DML(DeviceUtils.GetBestDeviceId());
+#endif
             }
 
             _inferenceSession = new InferenceSession(modelPath, sessionOptions);

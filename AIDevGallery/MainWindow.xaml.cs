@@ -14,11 +14,17 @@ using Windows.System;
 
 namespace AIDevGallery
 {
-    internal sealed partial class MainWindow : WinUIEx.WindowEx
+    internal sealed partial class MainWindow : Window //WinUIEx.WindowEx
     {
         public MainWindow(object? obj = null)
         {
             this.InitializeComponent();
+//#if WINDOWS
+//            this.Width = 1280;
+//            this.MinWidth = 640;
+//            this.MinHeight = 480;
+//#endif
+
             SetTitleBar();
             App.ModelCache.DownloadQueue.ModelsChanged += DownloadQueue_ModelsChanged;
 

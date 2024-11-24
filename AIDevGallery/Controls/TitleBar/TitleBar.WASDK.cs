@@ -1,5 +1,6 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
+#if WINDOWS
 
 using Microsoft.UI;
 using Microsoft.UI.Input;
@@ -291,3 +292,4 @@ internal partial class TitleBar : Control
     }
 #pragma warning restore SA1306 // Field names should begin with lower-case letter
 }
+#endif

@@ -415,7 +415,7 @@ namespace AIDevGallery.Pages
             }
             catch (Exception ex)
             {
-                Debug.WriteLine(ex);
+                System.Diagnostics.Debug.WriteLine(ex);
                 dialog?.Hide();
 
                 var message = "Please try again, or report this issue.";

@@ -300,7 +300,7 @@ internal partial class ModelSelectionControl : UserControl
                 Title = "Delete model",
                 Content = "Are you sure you want to delete this model? You can download it again from this page.",
                 PrimaryButtonText = "Yes",
-                XamlRoot = this.Content.XamlRoot,
+                XamlRoot = (this.Content as FrameworkElement)!.XamlRoot,
                 PrimaryButtonStyle = (Style)App.Current.Resources["AccentButtonStyle"],
                 CloseButtonText = "No"
             };

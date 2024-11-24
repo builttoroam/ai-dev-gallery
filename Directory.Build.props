@@ -14,6 +14,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+	  <DefaultItemExcludes>$(DefaultItemExcludes);ProjectGenerator\Template\**</DefaultItemExcludes>
   </PropertyGroup>
   
   <ItemGroup>

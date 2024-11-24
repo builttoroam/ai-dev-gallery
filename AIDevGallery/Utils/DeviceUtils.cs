@@ -3,12 +3,15 @@
 
 using System;
 using Windows.Win32.Foundation;
+#if WINDOWS
 using Windows.Win32.Graphics.Dxgi;
+#endif
 
 namespace AIDevGallery.Utils;
 
 internal static class DeviceUtils
 {
+#if WINDOWS
     public static int GetBestDeviceId()
     {
         int deviceId = 0;
@@ -111,4 +114,5 @@ internal static class DeviceUtils
     {
         return System.Runtime.InteropServices.RuntimeInformation.OSArchitecture == System.Runtime.InteropServices.Architecture.Arm64;
     }
+#endif
 }

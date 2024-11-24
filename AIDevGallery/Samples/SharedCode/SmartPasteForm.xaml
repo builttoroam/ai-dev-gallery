@@ -38,10 +38,13 @@
                             <Button
                                 x:Name="SmartPasteButton"
                                 AutomationProperties.Name="Paste unstructured address string"
-                                Click="SmartPasteButton_Click"
                                 Style="{StaticResource AccentButtonStyle}">
-                                <StackPanel Orientation="Horizontal" Spacing="12">
-                                    <FontIcon FontSize="16" Glyph="&#xE77F;" />
+                                <StackPanel
+                                    Orientation="Horizontal"
+                                    Spacing="12">
+                                    <FontIcon
+                                        FontSize="16"
+                                        Glyph="&#xE77F;" />
                                     <TextBlock Text="Paste" />
                                 </StackPanel>
                             </Button>

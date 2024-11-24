@@ -59,8 +59,10 @@
             </LinearGradientBrush>
         </ResourceDictionary>
     </UserControl.Resources>
-    <Grid x:Name="RootGrid" CornerRadius="8,0,0,0">
-        <wuc:OpacityMaskView
+    <Grid
+        x:Name="RootGrid"
+        CornerRadius="8,0,0,0">
+        <!--<wuc:OpacityMaskView
             HorizontalAlignment="Stretch"
             VerticalAlignment="Center"
             OpacityMask="{ThemeResource OverlayRadialGradient}">
@@ -75,7 +77,7 @@
                     </Border.Background>
                 </Border>
             </Grid>
-        </wuc:OpacityMaskView>
+        </wuc:OpacityMaskView>-->
         <StackPanel
             Padding="24"
             HorizontalAlignment="Center"
